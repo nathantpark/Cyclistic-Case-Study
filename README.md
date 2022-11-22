@@ -1,6 +1,6 @@
-# nathantpark.github.io
-Google Data Analytics Capstone Project:
-Cyclistic Case Study by: Nathan Park
+
+### Google Data Analytics Capstone Project:
+# Cyclistic Case Study by: Nathan Park
 
 Hello, I will be analyzing bikeshare data from Cyclisitic in order to find conclusions and make recommendations. 
 I will be using 6 steps: Ask, Prepare, Analyze, Share, and Act. This is a way to break down the analytics process into a clear structure. 
