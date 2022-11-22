@@ -5,11 +5,17 @@ Three questions will guide the future marketing program:
 1. How do annual members and casual riders use Cyclistic bikes differently?
 2. Why would casual riders buy Cyclistic annual memberships?
 3. How can Cyclistic use digital media to influence casual riders to become members?
-Lily Moreno has assigned us the first question for me to answer. Our business task is to analyze how annual members and casual riders use Cyclistic bikes differently in order to gain insight on how to effectively market to casual riders in order to increase annual membership.
+Lily Moreno has assigned us the first question for me to answer. Our business task is to analyze how annual members and casual riders use Cyclistic bikes differently 
+in order to gain insight on how to effectively market to casual riders in order to increase annual membership.
 
 ### Prepare
 
-The data source that we are using is historical bike trip data from Cyclistic. The trip data can be found here. Out of all the historical data, we will select the previous 12 months, which would be October 2021 to September 2022. The data is formatted in .csv files. The data has been licensed and made available by Motivate International Inc. by this license. (Disclaimer: because Cyclistic is a fictional company, the data is under a different name, but for the purposes of this case study, the data is appropriate) The data is from a public source, however data-privacy issues prohibit using riders’ personally identifiable information. Because of this, I won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
+The data source that we are using is historical bike trip data from Cyclistic. The trip data can be found here. Out of all the historical data, we will select the 
+previous 12 months, which would be October 2021 to September 2022. The data is formatted in .csv files. The data has been licensed and made available by Motivate 
+International Inc. by this license. (Disclaimer: because Cyclistic is a fictional company, the data is under a different name, but for the purposes of this case study,
+the data is appropriate) The data is from a public source, however data-privacy issues prohibit using riders’ personally identifiable information. Because of this, I 
+won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple 
+single passes.
 
 Process
 
@@ -153,28 +159,14 @@ In order to create the most effective visualizations, I chose to use Tableau as 
 
 This first visualization shows us the total number of rides. Annual members have a much larger total number of rides.
 
-
-
-
-
-
 This visualization shows the number of bike trips taken per month by comparing usertype. It allows us to see how the number of trips differ month to month. The line graph shows us that the number of bike rides peak for both casual riders and annual members from June to August. There seems to be a spike in bike use during summer months.
 
-
-
 This graph shows the length of rides by usertype over months. The previous visualization showed that annual members take more rides than casual riders. However, this graph reveals that the length of rides of casual riders far exceed the length of rides of annual members. Again, ride lengths seem to peak during the summer months. However, there is an additional peak during October. 
-
-
 
 This barchart shows that the ride lengths of casual riders peak during the weekend. However, 
 the ride lengths of annual members stay relatively consistent throughout the week. 
 
-
-
 On average, casual riders seem to take longer rides than annual members. The average peaks during the weekend for both casual riders and annual members.
-
-
-
 
 From this bar graph, it is revealed that annual members actually take more rides than casual riders do. Casual riders do have more rides on the weekends, but overall, annual members take more bike rides. 
 
