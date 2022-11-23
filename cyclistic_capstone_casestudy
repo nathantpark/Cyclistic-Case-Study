@@ -4,15 +4,15 @@ title: Cyclistic Case Study
 ---
 
 
-Google Data Analytics Capstone Project:
-Cyclistic Case Study by: Nathan Park
+### Google Data Analytics Capstone Project:
+### Cyclistic Case Study by: Nathan Park
 
 Hello, I will be analyzing bikeshare data from Cyclisitic in order to find conclusions and make recommendations. I will be using 6 steps: Ask, Prepare, Analyze, Share, and Act. This is a way to break down the analytics process into a clear structure. I will be using R and Tableau to analyze and visualize the data.
 Scenario
 
 You are a junior data analyst working in the marketing analyst team at Cyclistic, a bike-share company in Chicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed up with compelling data insights and professional data visualizations.
 
-Stakeholders
+## Stakeholders
 
 Cyclistic: A bike-share program that features more than 5,800 bicycles and 600 docking stations. Cyclistic sets itself apart by also offering reclining bikes, hand tricycles, and cargo bikes, making bike-share more inclusive to people with disabilities and riders who can’t use a standard two-wheeled bike. The majority of riders opt for traditional bikes; about 8% of riders use the assistive options. Cyclistic users are more likely to ride for leisure, but about 30% use them to
 commute to work each day.
@@ -25,12 +25,12 @@ achieve them.
 Cyclistic executive team: The notoriously detail-oriented executive team will decide whether to approve the
 recommended marketing program.
 
-About the company
+## About the company
 
 In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime. Until now, Cyclistic’s marketing strategy relied on building general awareness and appealing to broad consumer segments. One approach that helped make these things possible was the flexibility of its pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
 Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. Although the pricing flexibility helps Cyclistic attract more customers, Moreno believes that maximizing the number of annual members will be key to future growth. Rather than creating a marketing campaign that targets all-new customers, Moreno believes there is a very good chance to convert casual riders into members. She notes that casual riders are already aware of the Cyclistic program and have chosen Cyclistic for their mobility needs. Moreno has set a clear goal: Design marketing strategies aimed at converting casual riders into annual members. In order to do that, however, the marketing analyst team needs to better understand how annual members and casual riders differ, why casual riders would buy a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to identify trends.
 
-Ask
+## Ask
 
 Cyclistic is trying to increase the number of annual members by transitioning casual riders into annual members in order to maximize the growth of the company. 
 Three questions will guide the future marketing program:
@@ -39,11 +39,11 @@ Three questions will guide the future marketing program:
 3. How can Cyclistic use digital media to influence casual riders to become members?
 Lily Moreno has assigned us the first question for me to answer. Our business task is to analyze how annual members and casual riders use Cyclistic bikes differently in order to gain insight on how to effectively market to casual riders in order to increase annual membership.
 
-Prepare
+## Prepare
 
 The data source that we are using is historical bike trip data from Cyclistic. The trip data can be found here. Out of all the historical data, we will select the previous 12 months, which would be October 2021 to September 2022. The data is formatted in .csv files. The data has been licensed and made available by Motivate International Inc. by this license. (Disclaimer: because Cyclistic is a fictional company, the data is under a different name, but for the purposes of this case study, the data is appropriate) The data is from a public source, however data-privacy issues prohibit using riders’ personally identifiable information. Because of this, I won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
 
-Process
+## Process
 
 The Cyclistic historical trip data contains millions of records. Due to the amount of data, tools like Google Sheets or Microsoft Excel would not be able to process the data efficiently. Because of this, I chose to use Rstudio to clean and analyze the data. Rstudio can process, analyze and visualize large amounts of data.
 
@@ -150,7 +150,7 @@ all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$
 # remove all na values
 all_trips_v3<-na.omit(all_trips_v2)
 
-Analyze
+## Analyze
 
 To start analyzing the data, I used the summary() function to find the mean, median, minimum and maximum value of the all_trips_v3 data frame. This gives us more insight on the data and we can start to see where the data is trending. 
 
@@ -179,39 +179,26 @@ all_trips_v3%>%
 				summarise(number_of_rides=n(),average_duration=mean(ride_length))%>%
 					arrange(user_type,weekday)
 
-Share
+## Share
+
+The visualizations themselves can be found in the visualizations folder. 
 
 In order to create the most effective visualizations, I chose to use Tableau as a tool to create and showcase them. To do this, I needed to export the data from Rstudio. I used the write.csv() function to export the data. Once exported, I uploaded the data to Tableau Public and started creating visualizations.
 
-This first visualization shows us the total number of rides. Annual members have a much larger total number of rides.
+The visualization rides_count_piechart shows us the total number of rides. Annual members have a much larger total number of rides.
+
+The graph num_rides_per_month shows the number of bike trips taken per month by comparing usertype. It allows us to see how the number of trips differ month to month. The line graph shows us that the number of bike rides peak for both casual riders and annual members from June to August. There seems to be a spike in bike use during summer months.
+
+The visualiztion length_of_rides_per_month shows the length of rides by usertype over months. The previous visualization showed that annual members take more rides than casual riders. However, this graph reveals that the length of rides of casual riders far exceed the length of rides of annual members. Again, ride lengths seem to peak during the summer months. However, there is an additional peak during October. 
+
+The barchart ride_length_day_of_week shows that the ride lengths of casual riders peak during the weekend. However, the ride lengths of annual members stay relatively consistent throughout the week. 
+
+Another barchart, avg_trip_duration_day_of_week shows that on average, casual riders seem to take longer rides than annual members. The average peaks during the weekend for both casual riders and annual members.
+
+From the final visualization, num_rides_day_of_week it is revealed that annual members actually take more rides than casual riders do. Casual riders do have more rides on the weekends, but overall, annual members take more bike rides. 
 
 
-
-
-
-
-This visualization shows the number of bike trips taken per month by comparing usertype. It allows us to see how the number of trips differ month to month. The line graph shows us that the number of bike rides peak for both casual riders and annual members from June to August. There seems to be a spike in bike use during summer months.
-
-
-
-This graph shows the length of rides by usertype over months. The previous visualization showed that annual members take more rides than casual riders. However, this graph reveals that the length of rides of casual riders far exceed the length of rides of annual members. Again, ride lengths seem to peak during the summer months. However, there is an additional peak during October. 
-
-
-
-This barchart shows that the ride lengths of casual riders peak during the weekend. However, 
-the ride lengths of annual members stay relatively consistent throughout the week. 
-
-
-
-On average, casual riders seem to take longer rides than annual members. The average peaks during the weekend for both casual riders and annual members.
-
-
-
-
-From this bar graph, it is revealed that annual members actually take more rides than casual riders do. Casual riders do have more rides on the weekends, but overall, annual members take more bike rides. 
-
-
-Act
+## Act
 
 From the data that I analyzed and visualized, I was able to identify and understand some important differences between casual riders and annual members. 
 
