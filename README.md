@@ -45,5 +45,5 @@ identify trends.
 
 ### Dataset
 
-The source for the datasets can be found [here]([url](https://divvy-tripdata.s3.amazonaws.com/index.html)
+The source for the datasets can be found [here](https://divvy-tripdata.s3.amazonaws.com/index.html)
 The data has been licensed and made available by Motivate International Inc. by this [license](https://ride.divvybikes.com/data-license-agreement)
