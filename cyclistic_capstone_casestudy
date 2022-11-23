@@ -122,7 +122,8 @@ colnames(jul_2022_trips)
 colnames(aug_2022_trips)
 colnames(sep_2022_trips)
 
-Since the variable names are all the same, I combined all the month datasets into one dataframe using the bind_rows() function. This dataframe will be called all_trips. This made it easier for me to analyze all the data together without having to call all 12 datasets every time. 
+Since the variable names are all the same, I combined all the month datasets into one dataframe using the bind_rows() function. This dataframe will be called  
+all_trips. This made it easier for me to analyze all the data together without having to call all 12 datasets every time. 
 
 # binding all the month data frames into one
 
@@ -161,8 +162,8 @@ analyze.
 all_trips$ride_length<-difftime(all_trips$end_time,all_trips$start_time)
 
 Next, I used the str() function to check the formatting of the columns. The ride_length column should be numeric in order to run calculations on it. I used the  
-typeof() function in order to check the formatting of the ride_length column. The as.numeric() function changes the format to numeric and I used is.numeric() to make   
-sure that ride_length is numeric.
+typeof() function in order to check the formatting of the ride_length column. The as.numeric() function changes the format to numeric and I used is.numeric() to  
+make sure that ride_length is numeric.
 
 # check structure of the columns
 str(all_trips)
@@ -229,9 +230,9 @@ month.
 The line graph shows us that the number of bike rides peak for both casual riders and annual members from June to August. There seems to be a spike in bike use  
 during summer months.
 
-The visualiztion length_of_rides_per_month shows the length of rides by usertype over months. The previous visualization showed that annual members take more rides  
-than casual riders. However, this graph reveals that the length of rides of casual riders far exceed the length of rides of annual members. Again, ride lengths seem  
-to peak during the summer months. However, there is an additional peak during October. 
+The visualiztion length_of_rides_per_month shows the length of rides by usertype over months. The previous visualization showed that annual members take more rides
+than casual riders. However, this graph reveals that the length of rides of casual riders far exceed the length of rides of annual members. Again, ride lengths  
+seem to peak during the summer months. However, there is an additional peak during October. 
 
 The barchart ride_length_day_of_week shows that the ride lengths of casual riders peak during the weekend. However, the ride lengths of annual members stay  
 relatively consistent throughout the week. 
@@ -257,7 +258,11 @@ to go outside and exercise. Also, children who are still in school are more like
 the lower numbers in the winter months. I hypothesize that the additional spike in rides in October is an outlier and could be the result of warmer weather in  
 October than usual. However, more data and analysis would need to be done to form a definitive conclusion.
 
-Finally, when we look at the difference in user type by day of week, we see that casual riders have longer total rides and longer rides on average than annual members. However, annual members have consistent ride lengths throughout the week while casual riders peak on the weekends. Annual members take more rides throughout the week, however, casual riders tend to have more rides on the weekends. I believe this is because annual members use bikes consistently, indicating they use bikes for commuting or for daily exercise. Because casual riders take bike rides less frequently but at the same time take much longer rides, this reveals that casual riders use bikes for temporary leisure, transportation, or recreation. 
+Finally, when we look at the difference in user type by day of week, we see that casual riders have longer total rides and longer rides on average than annual  
+members. However, annual members have consistent ride lengths throughout the week while casual riders peak on the weekends. Annual members take more rides  
+throughout the week, however, casual riders tend to have more rides on the weekends. I believe this is because annual members use bikes consistently, indicating  
+they use bikes for commuting or for daily exercise. Because casual riders take bike rides less frequently but at the same time take much longer rides, this reveals  
+that casual riders use bikes for temporary leisure, transportation, or recreation. 
 
 
 Here are some marketing strategies that I recommend based on the data.
