@@ -1,3 +1,8 @@
+---
+layout: default
+title: Cyclistic Data Analysis Code
+---
+
 # setting up packages for analysis
 install.packages("tidyverse")
 library("tidyverse")
