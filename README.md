@@ -42,3 +42,8 @@ program and have chosen Cyclistic for their mobility needs. Moreno has set a cle
 members. In order to do that, however, the marketing analyst team needs to better understand how annual members and casual riders differ, why casual riders would buy 
 a membership, and how digital media could affect their marketing tactics. Moreno and her team are interested in analyzing the Cyclistic historical bike trip data to 
 identify trends.
+
+### Dataset
+
+The source for the datasets can be found here: [https://divvy-tripdata.s3.amazonaws.com/index.html](url)
+The data has been licensed and made available by Motivate International Inc. by this license: [https://ride.divvybikes.com/data-license-agreement](url)
